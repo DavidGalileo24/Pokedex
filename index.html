@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI - Prueba técnica</title>
+    <!--normalize-->
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <!--css-->
+    <link rel="stylesheet" href="assets/styles.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!--ico-->
+    <link rel="icon" href="assets/images/ico.png">
+
+</head>
+<body class="body">
+
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-lg-1"> </div>
+            <div class="col-lg-10">
+                <img src="assets/images/logo.png" alt="Logo pokeapi" class="img-fluid img-responsive img-logo">
+            </div>
+            <div class="col-lg-1 text-center">
+                <br>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+                        <i class="fas fa-bars burguer"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+     <!--Buscadores - Filtros-->
+    <div class="container bg-light p-3" style="border-radius: 5px">
+        <div class="row">
+            <div class="col-lg-3">
+                <form action="" class="form-inline">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" type="search">
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="submit" class="btn btn-info" value="Buscar">
+                        </div>
+                    </div>                
+                   
+                </form>
+            </div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-3">
+                <form action="" class="form-inline">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <select name="filterPokemon" class="form-control" id="filterPokemon">
+                                <option value="">-Seleccione una opción-</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="submit" class="btn btn-secondary" value="Filtrar">
+                        </div>
+                    </div>                
+                   
+                </form>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+    <br><br>
+
+     <!--Pokemon Data-->
+    <div class="container-fluid text-center ">
+        <div id="datos" class="pokemonData"></div>
+    </div>
+
+<br><br>
+    <!--footer-->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-12">
+                <img src="assets/images/diparvel.png" alt="" class="img-logo">
+                <p>
+                    David Salgado &copy - prueba técnica 2022
+                </p>
+                <hr>
+                <div class="redes">
+                    <a href="https://www.linkedin.com/in/david-galileo-salgado-mej%C3%ADa-b1a07b128/" target="blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/DavidGalileo24/" target="blank"><i class="fab fa-github"></i></a>
+                    <a href="https://david-salgado.com/" target="blank"><i class="fas fa-globe"></i></a>
+                    <a href="https://www.instagram.com/david_galileo24/" target="blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    
+</body>
+</html>
