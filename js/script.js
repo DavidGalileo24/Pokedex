@@ -2,10 +2,22 @@
 
 /*Variables*/
 const datos = document.getElementById('datos');
-let i = 1;
+let page = 1;
+let previewButton = document.getElementById('previewButton');
+let nextButton = document.getElementById('nextButton');
+let offset = 1;
+let limit = 150;
+
+/*Events*/
+previewButton.addEventListener('click', () =>{
+    
+});
+previewButton.addEventListener('click', () =>{
+    
+});
 
 const pokemons = async() => {
-    for(i = 1; i <= 12; i++){
+    for(let i = offset; i <= offset + limit; i++){
         await pokemon(i)
     }
 }
@@ -30,19 +42,17 @@ const cardsPokemon = (pokemon) => {
     const pokeInfo = `
         <div class="cardF">
             <div class="col-xs-6">
-                <img src="${sprites.front_default}" alt="${name}" class="img-pokemon">
+                <img src="${sprites.front_default}" alt="${name}" class="img-pokemon" >
             </div>  
             <div class="col-xs-6 p-3"> 
-                <p class="color-gray">#${id.toString().padStart(3, 0)}</p>
+                <p class="color-gray" style="margin-bottom:5px;">#${id.toString().padStart(3, 0)}</p>
                 <h4 class="pokename">${name}</h4>
                 <button class="btn btn-outline-primary btn-sm pokename">${types.map(typeInfo => typeInfo.type.name).join(' | ')}</button>
             </div>
         </div>
     `;
     
-    if(types == 1){
-        divCard.classList.add('ground')
-    }
+    
     divCard.innerHTML = pokeInfo
     datos.appendChild(divCard)
     

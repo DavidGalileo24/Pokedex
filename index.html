@@ -32,9 +32,7 @@
                         <i class="fas fa-bars burguer"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Menú dropdown de prueba</a></li>
                       </ul>
                 </div>
             </div>
@@ -49,32 +47,14 @@
                 <form action="" class="form-inline">
                     <div class="row">
                         <div class="col-lg-10">
-                            <input type="text" class="form-control" type="search">
+                            <input type="text" class="form-control" type="search" placeholder="Buscar">
                         </div>
                         <div class="col-lg-2">
                             <input type="submit" class="btn btn-info" value="Buscar">
                         </div>
-                    </div>                
-                   
+                    </div>
                 </form>
             </div>
-            <div class="col-lg-5"></div>
-            <div class="col-lg-3">
-                <form action="" class="form-inline">
-                    <div class="row">
-                        <div class="col-lg-10">
-                            <select name="filterPokemon" class="form-control" id="filterPokemon">
-                                <option value="">-Seleccione una opción-</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-2">
-                            <input type="submit" class="btn btn-secondary" value="Filtrar">
-                        </div>
-                    </div>                
-                   
-                </form>
-            </div>
-            <div class="col-lg-1"></div>
         </div>
     </div>
     <br><br>
@@ -84,7 +64,19 @@
         <div id="datos" class="pokemonData"></div>
     </div>
 
-<br><br>
+    <br><br>
+    <!--Pagination-->
+    <div class="container-fluid bg-info p-3">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4" style="display: flex; justify-content: space-around;">
+                <button class="btn btn-success btn-lg" id="previewButton">Anterior</button>
+                <button class="btn btn-success btn-lg" id="nextButton">Siguiente</button>
+            </div>
+            
+            <div class="col-4"></div>
+        </div>
+    </div>
     <!--footer-->
     <div class="container-fluid footer">
         <div class="row">
