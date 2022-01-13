@@ -15,42 +15,37 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!--ico-->
     <link rel="icon" href="assets/images/ico.png">
+    <!--Pushbar-->
+    <link rel="stylesheet" href="js/pushbar/src/pushbar.css">
 
 </head>
 <body class="body">
 
     <div class="container-fluid header">
         <div class="row">
-            <div class="col-lg-1"> </div>
-            <div class="col-lg-10">
-                <img src="assets/images/logo.png" alt="Logo pokeapi" class="img-fluid img-responsive img-logo">
-            </div>
-            <div class="col-lg-1 text-center">
+            <div class="col-12"  style="display: flex; justify-content: space-between;">
+
+            
+                <img src="assets/images/logo.png" alt="Logo pokeapi" class="img-logo">
                 <br>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
-                        <i class="fas fa-bars burguer"></i>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Menú dropdown de prueba</a></li>
-                      </ul>
-                </div>
+                <button data-pushbar-target="mypushbar1" id="" class="pushbar-menu btn"><i class="fas fa-bars burguer"></i>
+                </button>
             </div>
         </div>
     </div>
     <br><br><br>
 
-     <!--Buscadores - Filtros-->
-    <div class="container bg-light p-3" style="border-radius: 5px">
+     <!--Search - Filters-->
+    <div class="container bg-light" style="border-radius: 5px">
         <div class="row">
-            <div class="col-lg-3">
-                <form action="" class="form-inline">
+            <div class="col-sm-12 col-md-4">
+                <form action="" class="form-inline p-2">
                     <div class="row">
-                        <div class="col-lg-10">
+                        <div class="col-8">
                             <input type="text" class="form-control" type="search" placeholder="Buscar">
                         </div>
-                        <div class="col-lg-2">
-                            <input type="submit" class="btn btn-info" value="Buscar">
+                        <div class="col-4">
+                            <input type="submit" class="btn btn-primary" value="Buscar">
                         </div>
                     </div>
                 </form>
@@ -65,18 +60,7 @@
     </div>
 
     <br><br>
-    <!--Pagination-->
-    <div class="container-fluid bg-info p-3">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4" style="display: flex; justify-content: space-around;">
-                <button class="btn btn-success btn-lg" id="previewButton">Anterior</button>
-                <button class="btn btn-success btn-lg" id="nextButton">Siguiente</button>
-            </div>
-            
-            <div class="col-4"></div>
-        </div>
-    </div>
+   
     <!--footer-->
     <div class="container-fluid footer">
         <div class="row">
@@ -97,9 +81,33 @@
     </div>
 
 
-
-
-
+    <!--Menu-->
+        <div  data-pushbar-id="mypushbar1" data-pushbar-direction="right" class="container-fluid" style="display: flex; align-content: center;">
+            <div class="row ">               
+                <div class="col-sm-12 col-md-12">
+                    <img src="assets/images/logo.png" alt="Logo pokeapi" class="img-fluid img-responsive img-logo">
+                    <hr>
+                    <div>
+                        <ul>
+                            <div class="pokeMenu">
+                                 <a href=""><li>Inicio</li></a>
+                            </div>
+                            <div class="pokeMenu">
+                                 <a href=""><li>Pokedex</li></a>
+                             </div>             
+                           
+                        </ul>
+                    </div>
+                </div>               
+                <!--
+                    <div class="col-3">
+                    <button class="btn" data-pushbar-close><i class="fas fa-window-close" style="font-size: 1.5em;"></i></button>
+                </div>
+                -->
+            </div>
+        
+        <br>      
+    </div>
 
 
 
@@ -108,9 +116,19 @@
 
 
     <script src="js/script.js"></script>
+    <!--Bootstrap-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    
+    <!--Pushbar-->
+    <script src="js/pushbar/src/pushbar.js"></script>
+
+    <script type="text/javascript">
+        const pushbar = new Pushbar({
+              blur:true,
+              overlay:true,
+            });
+      </script>
+          
 </body>
 </html>

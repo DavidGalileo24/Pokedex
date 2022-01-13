@@ -1,11 +1,12 @@
 /*Variables*/
 :root{
-    --color1: #1d579a;
-    --color2: #cc0e0e;
+    --color1: #cc0e0e;
+    --color2: #1d579a;
     --water: #1C6DD0;
     --flying: #A3E4DB;
     --normal: #BBBFCA;
     --ice: #00C1D4;
+    --gray: #BFA2DB;
 
 }
 
@@ -15,9 +16,12 @@
 }
 
 .body{
+    /*        
     background-image: url('./images/fondo5.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;    
+    
+    */
     font-family: 'Raleway', sans-serif;
 }
 .body2{
@@ -44,6 +48,21 @@
     padding: 5px;
     color: white;
 }
+.pokeMenu{
+   padding: 5px;
+}
+.pokeMenu a{
+    color: var(--color2);
+ }
+.pokeMenu:hover{
+    background-color: var(--color1);
+    border-radius: 5px;
+    
+}
+.pokeMenu a:hover{
+    color: white;
+}
+
 
 /*cards*/
 .pokemonData{
@@ -53,21 +72,21 @@
     align-items: center;
     margin: 0 auto;
 }
-.cards1{    
-    padding: 10px;
+.cards1{ 
     width: 100%;
     height: auto;
     background-color: white;
     border-radius: 10px;
-    margin: 7px;
+    margin: 10px;
     transition: all .3s;
-    
+    border: 1px solid var(--gray);
 }
 .img-pokemon{
-    border-radius: 10px;
+    border-radius: 10px 10px 40px 40px;
     width: 99%;
     height: auto;
-    background-color: var(--ice);
+    background-color: var(--color2);
+    
   
 }
 .cards1 .btn-grass{
@@ -80,11 +99,11 @@
 }
 
 .cards1:hover{
-    box-shadow: 10px 10px 1px var(--color1);
+    box-shadow: 10px 10px 1px var(--gray);
     cursor: pointer;
 }
 .color-gray{
-    color: gray;
+    color: var(--gray);
 }
 
 
@@ -102,8 +121,12 @@
     color: var(--color1);
     margin: 5px;
 }
-
-
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none !important;
+}
 
 
 
@@ -118,20 +141,20 @@
         border-radius: 10px;
         width: 125%;
         height: auto;
-        background-color: var(--ice);
       
     }
     .cards1{    
         padding: 5px;
-        background-color: white;
+        background-color: var(--color2);
         border-radius: 10px;
-        
+        color:white;
     }
     .cardF{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
+    
 }
 
 

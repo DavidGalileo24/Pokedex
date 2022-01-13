@@ -2,19 +2,10 @@
 
 /*Variables*/
 const datos = document.getElementById('datos');
-let page = 1;
-let previewButton = document.getElementById('previewButton');
-let nextButton = document.getElementById('nextButton');
 let offset = 1;
-let limit = 150;
+let limit = 25;
 
-/*Events*/
-previewButton.addEventListener('click', () =>{
-    
-});
-previewButton.addEventListener('click', () =>{
-    
-});
+
 
 const pokemons = async() => {
     for(let i = offset; i <= offset + limit; i++){
@@ -47,7 +38,7 @@ const cardsPokemon = (pokemon) => {
             <div class="col-xs-6 p-3"> 
                 <p class="color-gray" style="margin-bottom:5px;">#${id.toString().padStart(3, 0)}</p>
                 <h4 class="pokename">${name}</h4>
-                <button class="btn btn-outline-primary btn-sm pokename">${types.map(typeInfo => typeInfo.type.name).join(' | ')}</button>
+                <button class="btn btn-primary btn-sm pokename">${types.map(typeInfo => typeInfo.type.name).join(' | ')}</button>
             </div>
         </div>
     `;
