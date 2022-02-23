@@ -3,7 +3,7 @@
 /*Variables*/
 const datos = document.getElementById('datos');
 let offset = 1;
-let limit = 25;
+let limit = 898;
 
 
 
